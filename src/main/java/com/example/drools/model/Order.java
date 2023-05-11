@@ -1,15 +1,45 @@
 package com.example.drools.model;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 public class Order {
 	
 	private String name;
 	private String cardType;
 	private int discount;
 	private int price;
+	private int monto;
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCardType() {
+		return cardType;
+	}
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
+	}
+	public int getDiscount() {
+		return discount;
+	}
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getMonto() {
+		return monto;
+	}
+	public void setMonto(int monto) {
+		this.monto = monto;
+	}
 
 }

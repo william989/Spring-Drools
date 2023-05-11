@@ -1,0 +1,29 @@
+
+import com.example.drools.model.*;
+//import pe.gob.contraloria.sisco.drools.models.*;
+
+rule "HDFC"
+	when
+		$objetoRegla : ClaseRegla(cardType == "HDFC" and price > 10000)
+	then
+		$objetoRegla.setDiscount(10);
+		$objetoRegla.setMonto($objetoRegla.getPrice()-$objetoRegla.getPrice()*0.4);
+end
+
+rule "ICICI"
+	when
+		$objeto : ClaseRegla(cardType == "ICICI" && price > 15000)
+	then
+		$objeto.setDiscount(8);
+		$objeto.setMonto($objeto.getPrice()-$objeto.getPrice()*0.5);
+end
+
+rule "DBS"
+	when
+		$objeto : ClaseRegla(cardType == "DBS" && price > 15000)
+	then
+		$objeto.setDiscount(15);
+		$objeto.setMonto($objeto.getPrice()-$objeto.getPrice()*0.6);
+end
+
+	
